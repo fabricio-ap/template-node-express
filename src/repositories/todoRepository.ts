@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { Todo } from "../models";
+import { Todo } from "~/models";
 
 const todos: Todo[] = [];
 

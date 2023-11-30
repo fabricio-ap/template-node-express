@@ -1,1 +1,3 @@
-export * from "./todoController";
+import todoController from "./todoController";
+
+export { todoController };

@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { Todo } from "../models";
-import todoRepository from "../repositories/todoRepository";
+import { Todo } from "~/models";
+import { todoRepository } from "~/repositories";
 
 async function getTodo(req: Request, res: Response, next: NextFunction) {
   const { id } = req.params;
@@ -44,10 +44,4 @@ async function deleteTodo(req: Request, res: Response, next: NextFunction) {
   else res.sendStatus(404);
 }
 
-export default {
-  getTodo,
-  getTodos,
-  postTodo,
-  patchTodo,
-  deleteTodo,
-};
+export default { deleteTodo, getTodo, getTodos, patchTodo, postTodo };
